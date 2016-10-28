@@ -1,14 +1,14 @@
 ﻿media = false
 proNaam = Trema
 ini = %proNaam%.ini
-#warn
+
 IfNotExist,%ini%
 {
 	IniWrite,Windows Media Player,%ini%,media,audioTitle
 	IniWrite,C:\Program Files (x86)\Windows Media Player\wmplayer.exe,%ini%,media,audioDir
 }
-	IniRead,audioTitle,%ini%,media,audioTitle
-	IniRead,audioDir,%ini%,media,audioDir
+IniRead,audioTitle,%ini%,media,audioTitle
+IniRead,audioDir,%ini%,media,audioDir
 
 #if (media)
 {
